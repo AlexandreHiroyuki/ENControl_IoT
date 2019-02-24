@@ -1,14 +1,31 @@
 <template>
   <div class="controller">
-    <h1>Name</h1>
+    <h1>{{obj_name}}</h1>
 
-    <p>Status:</p>
+    <p>Status:
+      <StdButton :content="showStatus"/>
+    </p>
   </div>
 </template>
 
 <script>
+import StdButton from "@/components/StdButton.vue";
+
 export default {
-  name: "Controller"
+  name: "Controller",
+  components: {
+    StdButton
+  },
+  props: {
+    status: Boolean,
+    obj_name: String
+  },
+  computed: {
+    showStatus: function() {
+      if (this.status) return "ON";
+      else return "OFF";
+    }
+  }
 };
 </script>
 
@@ -46,6 +63,10 @@ export default {
     background-size: 100% 2px;
     background-repeat: no-repeat;
     background-position: bottom center;
+  }
+
+  p {
+    margin-top: 5%;
   }
 }
 </style>

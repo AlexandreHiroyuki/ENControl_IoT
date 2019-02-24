@@ -7,7 +7,7 @@
     <h2>Component List:</h2>
 
     <div id="obj-list">
-      <Controller/>
+      <Controller v-for="obj in control" :status="obj.status" :obj_name="obj.name" :key="obj.id"/>
     </div>
   </div>
 </template>
@@ -23,6 +23,22 @@ export default {
     Info,
     StdButton,
     Controller
+  },
+  data: function() {
+    return {
+      control: [
+        {
+          id: 1,
+          name: "Lampada 1",
+          status: true
+        },
+        {
+          id: 2,
+          name: "Motor 2",
+          status: false
+        }
+      ]
+    };
   }
 };
 </script>
@@ -45,6 +61,8 @@ export default {
   }
 
   #obj-list {
+    display: flex;
+
     margin-left: 5%;
     margin-right: 5%;
   }
