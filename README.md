@@ -1,6 +1,4 @@
-# Electrical Network Controller
-
-## Internet of Things
+# Electrical Network Controller - Internet of Things
 
 ## Project setup
 
