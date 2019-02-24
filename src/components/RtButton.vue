@@ -1,0 +1,31 @@
+<template>
+  <router-link :to="path" class="rtbutton">{{page_name}}</router-link>
+</template>
+
+<script>
+export default {
+  name: "StdButton",
+  props: {
+    page_name: String,
+    path: String
+  }
+};
+</script>
+
+<style lang="scss" scoped>
+.rtbutton {
+  display: inline;
+  padding: 0.5%;
+  margin: 0.5%;
+
+  border-radius: 10px;
+  border-width: 1%;
+  background-color: aqua;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.375);
+}
+:hover {
+  transform: translate(2px, 2px);
+  background-color: gold;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.375);
+}
+</style>
