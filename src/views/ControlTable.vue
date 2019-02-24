@@ -36,12 +36,10 @@ export default {
       control: [
         {
           id: 1,
-          name: "Lampada 1",
           status: true
         },
         {
           id: 2,
-          name: "Motor 2",
           status: false
         }
       ]
