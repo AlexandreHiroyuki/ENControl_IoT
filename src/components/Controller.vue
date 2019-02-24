@@ -1,7 +1,7 @@
 <template>
   <div class="controller">
+    <input v-model="obj_name" placeholder="Digite aqui">
     <h1>{{obj_name}}</h1>
-
     <p>Status:
       <StdButton :content="showStatus"/>
     </p>
