@@ -1,43 +1,38 @@
 <template>
-  <div class="readme">
-    <h1>Information</h1>
-    <p>{{msg}}</p>
+  <div id="history">
+    <h1>Change History</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Info",
-  props: {
-    msg: String
-  }
+  name: "History"
 };
 </script>
 
 <style lang="scss" scoped>
-.readme {
-  display: inline-block;
-  width: 90%;
-  padding: 0.75%;
-  margin-left: 4.125%;
-  margin-right: 4.125%;
-  margin-top: 1%;
-  margin-bottom: 1%;
+#history {
+  width: 100%;
+  min-height: 75vh;
+  margin-left: 1%;
+  margin-right: 5%;
+  padding: 1%;
 
-  border-radius: 10px 30px;
+  border-radius: 10px 30px 30px 30px;
   border-width: 1%;
-
   background-color: rgba(125, 255, 255, 0.625);
-
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgb(255, 217, 0)
+  );
   box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.375);
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.125rem;
     font-weight: bold;
-    padding-left: 5%;
-    margin: 0.75%;
 
-    text-align: left;
+    padding: 1.5%;
 
     background-image: linear-gradient(
       to right,
@@ -48,10 +43,6 @@ export default {
     background-size: 100% 2px;
     background-repeat: no-repeat;
     background-position: bottom center;
-  }
-  p {
-    text-align: left;
-    padding-left: 3%;
   }
 }
 </style>

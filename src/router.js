@@ -15,6 +15,11 @@ export default new Router({
       path: "/other",
       name: "other",
       component: () => import("./views/Other.vue")
+    },
+    {
+      path: "/ctrl-table",
+      name: "crtl-table",
+      component: () => import("./views/ControlTable.vue")
     }
   ]
 });

@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <h1>ENControl - Internet of Things</h1>
+    <h1 id="title">ENControl - Internet of Things</h1>
     <div id="nav">
-      <!-- <h2>Pages:</h2> -->
       <RtButton path="/" page_name="Home"/>
+      <RtButton path="/ctrl-table" page_name="Control Table"/>
       <RtButton path="/other" page_name="Other"/>
     </div>
     <router-view/>
@@ -37,7 +37,7 @@ export default {
     rgba(0, 255, 255, 0.5)
   );
 
-  h1 {
+  #title {
     font-size: 2rem;
     font-weight: bold;
     padding-left: 2.5%;
@@ -53,10 +53,12 @@ export default {
   }
 }
 #nav {
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
 
-  padding-left: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
   a {
     font-weight: bold;
     color: #000000;
