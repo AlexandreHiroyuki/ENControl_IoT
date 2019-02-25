@@ -1,5 +1,5 @@
 <template>
-  <input class="stdbutton" type="button" :value="content">
+  <a class="stdbutton">{{content}}</a>
 </template>
 
 <script>
