@@ -7,7 +7,13 @@
     <h2>Component List:</h2>
 
     <div id="obj-list">
-      <Controller v-for="obj in control" :status="obj.status" :obj_name="obj.name" :key="obj.id"/>
+      <Controller
+        @click="toggle()"
+        v-for="obj in control"
+        :status="obj.status"
+        :obj_name="obj.name"
+        :key="obj.id"
+      />
     </div>
   </div>
 </template>
@@ -26,6 +32,7 @@ export default {
   },
   data: function() {
     return {
+      msg: "Text text text...",
       control: [
         {
           id: 1,
@@ -37,6 +44,9 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    toggle: function() {}
   }
 };
 </script>
