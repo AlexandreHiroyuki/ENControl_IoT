@@ -7,7 +7,13 @@
     <h2>Component List:</h2>
 
     <div id="obj-list">
-      <Controller v-for="obj in control" :key="obj.id"/>
+      <Controller
+        @click="toggle()"
+        v-for="obj in control"
+        :status="obj.status"
+        :obj_name="obj.name"
+        :key="obj.id"
+      />
     </div>
   </div>
 </template>
@@ -29,18 +35,18 @@ export default {
       msg: "Text text text...",
       control: [
         {
-          id: 1
+          id: 1,
+          status: true
         },
         {
-          id: 2
+          id: 2,
+          status: false
         }
       ]
     };
   },
   methods: {
-    toggle: function() {
-      console.log("a");
-    }
+    toggle: function() {}
   }
 };
 </script>

@@ -2,31 +2,28 @@
   <div class="controller">
     <input v-model="obj_name" placeholder="Digite aqui">
     <h1>{{obj_name}}</h1>
-    <p>
-      Status:
-      <button class="stdbutton" @click="toggle()">{{showStatus}}</button>
+    <p>Status:
+      <StdButton :content="showStatus"/>
     </p>
   </div>
 </template>
 
 <script>
+import StdButton from "@/components/StdButton.vue";
+
 export default {
   name: "Controller",
-  data: function() {
-    return {
-      obj_name: "Default",
-      status: true
-    };
+  components: {
+    StdButton
+  },
+  props: {
+    status: Boolean,
+    obj_name: String
   },
   computed: {
     showStatus: function() {
       if (this.status) return "ON";
       else return "OFF";
-    }
-  },
-  methods: {
-    toggle: function() {
-      this.status = !this.status;
     }
   }
 };
@@ -70,27 +67,6 @@ export default {
 
   p {
     margin-top: 5%;
-  }
-
-  .stdbutton {
-    display: inline;
-    padding: 0.625%;
-    margin-left: 1%;
-
-    border-radius: 10px;
-    border-width: 1%;
-    background-color: aqua;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.375);
-  }
-  .stdbutton:hover {
-    transform: translate(2px, 2px);
-    background-color: gold;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.375);
-  }
-  .stdbutton:focus {
-    transform: translate(2px, 2px);
-    background-color: gold;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.375);
   }
 }
 </style>
