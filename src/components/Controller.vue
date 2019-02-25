@@ -3,7 +3,7 @@
     <input v-model="obj_name" placeholder="Digite aqui">
     <h1>{{obj_name}}</h1>
     <p>Status:
-      <StdButton :content="showStatus"/>
+      <button  v-on:click="status =!status">{{showStatus}}</button>
     </p>
   </div>
 </template>
