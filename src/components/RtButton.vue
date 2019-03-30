@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "StdButton",
+  name: "RtButton",
   props: {
     page_name: String,
     path: String

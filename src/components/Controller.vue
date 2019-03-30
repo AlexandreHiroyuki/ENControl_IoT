@@ -10,13 +10,8 @@
 </template>
 
 <script>
-import StdButton from "@/components/StdButton.vue";
-
 export default {
   name: "Controller",
-  components: {
-    StdButton
-  },
   data: function() {
     return {
       obj_name: "Default",

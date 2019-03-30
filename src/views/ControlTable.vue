@@ -2,7 +2,7 @@
   <div id="ctrl-table">
     <Info :msg="msg"/>
     <div id="search-filters">
-      <StdButton class="search-button" content="All On"/>
+      <button class="search-button" value="All On"/>
     </div>
     <h2>Component List:</h2>
 
@@ -14,14 +14,12 @@
 
 <script>
 import Info from "@/components/Info.vue";
-import StdButton from "@/components/StdButton.vue";
 import Controller from "@/components/Controller.vue";
 
 export default {
   name: "ControlTable",
   components: {
     Info,
-    StdButton,
     Controller
   },
   data: function() {
