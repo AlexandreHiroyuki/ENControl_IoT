@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+import ControlTable from "./views/ControlTable.vue";
 
 Vue.use(Router);
 
@@ -8,18 +8,13 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: Home
-    },
-    {
-      path: "/other",
-      name: "other",
-      component: () => import("./views/Other.vue")
-    },
-    {
-      path: "/ctrl-table",
       name: "crtl-table",
-      component: () => import("./views/ControlTable.vue")
+      component: ControlTable
     }
+    // {
+    //   path: "/other",
+    //   name: "other",
+    //   component: () => import("./views/Other.vue")
+    // }
   ]
 });

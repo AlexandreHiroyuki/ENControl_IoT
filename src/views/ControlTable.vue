@@ -1,9 +1,11 @@
 <template>
   <div id="ctrl-table">
-    <Info :msg="msg"/>
-    <div id="search-filters">
-      <button class="search-button" value="All On"/>
+    <img alt="ENC Logo" src="../assets/logo.png">
+
+    <div id="aside" class>
+      <History/>
     </div>
+
     <h2>Component List:</h2>
 
     <div id="obj-list">
@@ -13,14 +15,14 @@
 </template>
 
 <script>
-import Info from "@/components/Info.vue";
 import Controller from "@/components/Controller.vue";
+import History from "@/components/History.vue";
 
 export default {
   name: "ControlTable",
   components: {
-    Info,
-    Controller
+    Controller,
+    History
   },
   data: function() {
     return {
@@ -34,9 +36,6 @@ export default {
         }
       ]
     };
-  },
-  methods: {
-    toggle: function() {}
   }
 };
 </script>
@@ -50,14 +49,6 @@ export default {
     width: 50%;
   }
 
-  #search-filters {
-    float: right;
-    min-width: 50%;
-    margin-right: 4.5%;
-
-    text-align: right;
-  }
-
   #obj-list {
     display: flex;
 
@@ -65,5 +56,13 @@ export default {
     margin-right: 5%;
   }
 }
+
+// #aside {
+//   float: right;
+//   min-width: 30%;
+//   margin-right: 5%;
+
+//   text-align: left;
+// }
 </style>
  
