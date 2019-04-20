@@ -1,12 +1,10 @@
 <template>
   <div id="ctrl-table">
-    <div id="aside" class>
-      <History/>
-    </div>
+    <History/>
 
     <h2>Component List:</h2>
 
-    <div id="obj-list" class="flex flex-wrap">
+    <div class="flex flex-wrap justify-center">
       <Controller @click="toggle()" v-for="obj in control" :key="obj.id" :obj_name="obj.id"/>
     </div>
   </div>
@@ -41,7 +39,7 @@ export default {
           id: "Lamp 3"
         },
         {
-          id: "Banana"
+          id: "Strawberry"
         }
       ]
     };
@@ -49,21 +47,6 @@ export default {
 };
 </script>
  
- <style lang="scss">
-#ctrl-table {
-  h2 {
-    text-align: left;
-
-    padding-left: 5%;
-    width: 50%;
-  }
-
-  #obj-list {
-    display: flex;
-
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
+<style lang="scss">
 </style>
  

@@ -1,11 +1,11 @@
 <template>
-  <div class="controller mt3">
+  <div class="controller w-30 ma3">
     <input class="w-90" v-model="obj_name" placeholder="Digite aqui">
     <h1>{{obj_name}}</h1>
     <p>
       Status:
       <button
-        class="di b--solid b--light-green br2 bg-yellow hover-bg-light-blue"
+        class="di b--solid b--light-green br2 bg-yellow hover-bg-light-blue pa1"
         @click="toggle()"
       >{{showStatus}}</button>
     </p>
@@ -39,10 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .controller {
-  width: 25%;
   min-height: 40vh;
-  margin-left: 1%;
-  margin-right: 5%;
   padding: 1%;
 
   border-radius: 10px 30px 30px 30px;
