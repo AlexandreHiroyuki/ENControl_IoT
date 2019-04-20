@@ -10,11 +10,11 @@ export default new Router({
       path: "/",
       name: "crtl-table",
       component: ControlTable
+    },
+    {
+      path: "/test",
+      name: "test",
+      component: () => import("./views/Test.vue")
     }
-    // {
-    //   path: "/other",
-    //   name: "other",
-    //   component: () => import("./views/Other.vue")
-    // }
   ]
 });

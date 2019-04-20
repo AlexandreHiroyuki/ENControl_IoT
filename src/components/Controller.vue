@@ -1,10 +1,13 @@
 <template>
-  <div class="controller">
-    <input v-model="obj_name" placeholder="Digite aqui">
+  <div class="controller mt3">
+    <input class="w-90" v-model="obj_name" placeholder="Digite aqui">
     <h1>{{obj_name}}</h1>
     <p>
       Status:
-      <button class="stdbutton" @click="toggle()">{{showStatus}}</button>
+      <button
+        class="di b--solid b--light-green br2 bg-yellow hover-bg-light-blue"
+        @click="toggle()"
+      >{{showStatus}}</button>
     </p>
   </div>
 </template>
@@ -12,9 +15,11 @@
 <script>
 export default {
   name: "Controller",
+  props: {
+    obj_name: String
+  },
   data: function() {
     return {
-      obj_name: "Default",
       status: true
     };
   },
@@ -70,27 +75,6 @@ export default {
 
   p {
     margin-top: 5%;
-  }
-
-  .stdbutton {
-    display: inline;
-    padding: 0.625%;
-    margin-left: 1%;
-
-    border-radius: 10px;
-    border-width: 1%;
-    background-color: aqua;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.375);
-  }
-  .stdbutton:hover {
-    transform: translate(2px, 2px);
-    background-color: gold;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.375);
-  }
-  .stdbutton:focus {
-    transform: translate(2px, 2px);
-    background-color: gold;
-    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.375);
   }
 }
 </style>

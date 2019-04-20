@@ -4,7 +4,13 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {},
-  mutations: {},
+  state: {
+    bt_add_state: false
+  },
+  mutations: {
+    btAddStateSwitch(state) {
+      state.bt_add_state = !state.bt_add_state;
+    }
+  },
   actions: {}
 });

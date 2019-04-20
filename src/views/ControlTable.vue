@@ -1,15 +1,13 @@
 <template>
   <div id="ctrl-table">
-    <img alt="ENC Logo" src="../assets/logo.png">
-
     <div id="aside" class>
       <History/>
     </div>
 
     <h2>Component List:</h2>
 
-    <div id="obj-list">
-      <Controller @click="toggle()" v-for="obj in control" :key="obj.id"/>
+    <div id="obj-list" class="flex flex-wrap">
+      <Controller @click="toggle()" v-for="obj in control" :key="obj.id" :obj_name="obj.id"/>
     </div>
   </div>
 </template>
@@ -26,13 +24,24 @@ export default {
   },
   data: function() {
     return {
-      msg: "Text text text...",
       control: [
         {
-          id: 1
+          id: "Lamp 1"
         },
         {
-          id: 2
+          id: "Machine 1"
+        },
+        {
+          id: "Machine 2"
+        },
+        {
+          id: "Lamp 2"
+        },
+        {
+          id: "Lamp 3"
+        },
+        {
+          id: "Banana"
         }
       ]
     };
@@ -56,13 +65,5 @@ export default {
     margin-right: 5%;
   }
 }
-
-// #aside {
-//   float: right;
-//   min-width: 30%;
-//   margin-right: 5%;
-
-//   text-align: left;
-// }
 </style>
  
