@@ -20,7 +20,7 @@
           class="b--none br4 pa2 bg-light-yellow hover-bg-light-blue blue"
         >
           +
-          <span v-show="$store.state.btt_state" class="di">Create a new group</span>
+          <span v-show="$store.state.bt_state" class="di">Create a new group</span>
         </button>
       </div>
     </header>

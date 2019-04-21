@@ -5,7 +5,7 @@
   >
     <input
       class="w-90 bw-0 bg-transparent bt-0 br-0 bl-0 b--light-blue"
-      v-model="obj_name"
+      v-model="$store.state.controller[index].id"
       placeholder="Digite aqui"
     >
     <h1>{{obj_name}}</h1>
@@ -14,7 +14,7 @@
       <button
         class="di b--solid br2 bg-light-yellow hover-bg-light-blue pa1"
         :class="[status ? 'b--green' : 'b--light-red']"
-        @click="toggle()"
+        @click="$store.commit('controllerSwitch', index)"
       >{{showStatus}}</button>
     </p>
   </div>
@@ -24,22 +24,18 @@
 export default {
   name: "Controller",
   props: {
-    obj_name: String
-  },
-  data: function() {
-    return {
-      status: true
-    };
+    index: Number
   },
   computed: {
+    obj_name: function() {
+      return this.$store.state.controller[this.index].id;
+    },
+    status: function() {
+      return this.$store.state.controller[this.index].status;
+    },
     showStatus: function() {
       if (this.status) return "ON";
       else return "OFF";
-    }
-  },
-  methods: {
-    toggle: function() {
-      this.status = !this.status;
     }
   }
 };

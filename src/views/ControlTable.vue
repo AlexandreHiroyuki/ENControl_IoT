@@ -2,12 +2,17 @@
   <div id="ctrl-table">
     <History/>
 
-    <p class="tc" @click="$store.commit('increment')">Vuex test counter: {{counter}}</p>
+    <p class="tc" @click="$store.commit('increment')">Click on Vuex to count: {{counter}}</p>
 
     <h2>Component List:</h2>
 
     <div class="flex flex-wrap justify-center">
-      <Controller @click="toggle()" v-for="obj in control" :key="obj.id" :obj_name="obj.id"/>
+      <Controller
+        @click="toggle()"
+        v-for="(obj, index) in $store.state.controller"
+        :key="index"
+        :index="index"
+      />
     </div>
   </div>
 </template>
@@ -21,30 +26,6 @@ export default {
   components: {
     Controller,
     History
-  },
-  data: function() {
-    return {
-      control: [
-        {
-          id: "Lamp 1"
-        },
-        {
-          id: "Machine 1"
-        },
-        {
-          id: "Machine 2"
-        },
-        {
-          id: "Lamp 2"
-        },
-        {
-          id: "Lamp 3"
-        },
-        {
-          id: "Strawberry"
-        }
-      ]
-    };
   },
   computed: {
     counter: function() {
