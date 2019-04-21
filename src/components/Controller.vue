@@ -1,6 +1,6 @@
 <template>
   <div
-    class="controller w-30 ma3 shadow-3 pa2 br4 br--right br--bottom bw5 b--blue"
+    class="controller w-30 ma2 shadow-3 pa2 br4 br--right br--bottom"
     :class="[status ? 'bg-green' : 'bg-red']"
   >
     <input
@@ -8,8 +8,8 @@
       v-model="$store.state.controller[index].id"
       placeholder="Digite aqui"
     >
-    <h1>{{obj_name}}</h1>
-    <p>
+    <h1 class="b f4 pa1 mb1">{{obj_name}}</h1>
+    <p class="mt2">
       Status:
       <button
         class="di b--solid br2 bg-light-yellow hover-bg-light-blue pa1"
@@ -43,16 +43,12 @@ export default {
 
 <style lang="scss" scoped>
 .controller {
-  // background-color: greenyellow;
+  @media (max-width: 600px) {
+    width: 45%;
+  }
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #96ccffbb);
 
   h1 {
-    font-size: 1.25rem;
-    font-weight: bold;
-
-    padding: 1.5%;
-    margin-bottom: 1.5%;
-
     background-image: linear-gradient(
       to right,
       rgba(200, 200, 200, 0),
@@ -62,10 +58,6 @@ export default {
     background-size: 100% 2px;
     background-repeat: no-repeat;
     background-position: bottom center;
-  }
-
-  p {
-    margin-top: 5%;
   }
 }
 </style>

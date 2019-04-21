@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="bg-light-yellow helvetica">
     <header class="bg-light-blue shadow-1 flex flex-wrap">
-      <img alt="ENC Logo" src="./assets/logo.png" class="dib w3 h3">
-      <h1 class="dib f2 mb2 b w-90">EnergyNetworkControl - Internet of Things</h1>
+      <img alt="ENC Logo" src="./assets/logo.png" class="dib w-10 h3">
+      <h1 class="dib f2 mb2 b w-90">Energy Network Control - Internet of Things</h1>
 
       <div class="bg-lightest-blue w-100">
         <router-link
