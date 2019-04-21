@@ -3,15 +3,20 @@
     <header class="bg-light-blue shadow-1 flex flex-wrap">
       <img alt="ENC Logo" src="./assets/logo.png" class="dib w3 h3">
       <h1 class="dib f2 mb2 b w-90">EnergyNetworkControl - Internet of Things</h1>
+
       <div class="bg-lightest-blue w-100">
         <router-link
           to="/"
           class="bg-blue hover-bg-light-blue br4 pa2 ma1 dib yellow"
         >All Components</router-link>
         <router-link to="/test" class="bg-blue hover-bg-light-blue br4 pa2 ma1 dib yellow">Test</router-link>
-        <button class="b--none br2 bg-blue hover-bg-light-blue yellow">
+
+        <button
+          @focus="$store.commit('btShow')"
+          class="b--none br2 bg-blue hover-bg-light-blue yellow"
+        >
           +
-          <div v-show="$store.state.bt_add_state" class="di">Create a new group</div>
+          <span v-show="$store.state.btt_state" class="di">Create a new group</span>
         </button>
       </div>
     </header>

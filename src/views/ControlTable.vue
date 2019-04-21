@@ -2,6 +2,8 @@
   <div id="ctrl-table">
     <History/>
 
+    <p class="tc" @click="$store.commit('increment')">Vuex test counter: {{counter}}</p>
+
     <h2>Component List:</h2>
 
     <div class="flex flex-wrap justify-center">
@@ -43,6 +45,11 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    counter: function() {
+      return this.$store.state.count;
+    }
   }
 };
 </script>

@@ -5,11 +5,15 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    bt_add_state: false
+    btt_state: false,
+    count: 1
   },
   mutations: {
-    btAddStateSwitch(state) {
-      state.bt_add_state = !state.bt_add_state;
+    btShow(state) {
+      state.btt_state = !state.btt_state;
+    },
+    increment(state) {
+      state.count *= 2;
     }
   },
   actions: {}
