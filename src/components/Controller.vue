@@ -1,15 +1,19 @@
 <template>
   <div
-    class="controller w-30 ma3 shadow-3 pa2 br4 br--right br--bottom"
-    :class="{'bg-green': status, 'bg-red': !status}"
+    class="controller w-30 ma3 shadow-3 pa2 br4 br--right br--bottom bw5 b--blue"
+    :class="[status ? 'bg-green' : 'bg-red']"
   >
-    <input class="w-90" v-model="obj_name" placeholder="Digite aqui">
+    <input
+      class="w-90 bw-0 bg-transparent bt-0 br-0 bl-0 b--light-blue"
+      v-model="obj_name"
+      placeholder="Digite aqui"
+    >
     <h1>{{obj_name}}</h1>
     <p>
       Status:
       <button
-        class="di b--solid br2 bg-yellow hover-bg-light-blue pa1"
-        :class="{'b--green': !status, 'b--light-red': status}"
+        class="di b--solid br2 bg-light-yellow hover-bg-light-blue pa1"
+        :class="[status ? 'b--green' : 'b--light-red']"
         @click="toggle()"
       >{{showStatus}}</button>
     </p>
@@ -44,11 +48,7 @@ export default {
 <style lang="scss" scoped>
 .controller {
   // background-color: greenyellow;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgb(255, 217, 0)
-  );
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #96ccffbb);
 
   h1 {
     font-size: 1.25rem;
@@ -60,7 +60,7 @@ export default {
     background-image: linear-gradient(
       to right,
       rgba(200, 200, 200, 0),
-      goldenrod,
+      #96ccff,
       rgba(200, 200, 200, 0)
     );
     background-size: 100% 2px;

@@ -10,7 +10,10 @@ export default new Vuex.Store({
   },
   mutations: {
     btShow(state) {
-      state.btt_state = !state.btt_state;
+      state.btt_state = true;
+    },
+    btHide(state) {
+      state.btt_state = false;
     },
     increment(state) {
       state.count *= 2;
