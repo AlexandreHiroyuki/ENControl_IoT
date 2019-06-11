@@ -2,17 +2,19 @@
   <div id="ctrl-table">
     <History/>
 
-    <p class="tc" @click="$store.commit('increment')">Click on Vuex to count: {{counter}}</p>
+    <div class="pa2 mb2 bg-dark-yellow">
+      Search for:
+      <input
+        class="w-30 bw-0 bg-transparent bt-0 br-0 bl-0 b--yellow"
+        placeholder="Digite aqui"
+        v-model.trim="this.searchInput"
+      >
+    </div>
 
-    <h2>Component List:</h2>
+    <h2 class="ml2">Component List:</h2>
 
     <div class="flex flex-wrap justify-center">
-      <Controller
-        @click="toggle()"
-        v-for="(obj, index) in $store.state.controller"
-        :key="index"
-        :index="index"
-      />
+      <Controller v-for="(obj, index) in controllerMapped" :key="index" :index="index"/>
     </div>
   </div>
 </template>
@@ -27,9 +29,14 @@ export default {
     Controller,
     History
   },
+  data: function() {
+    return {
+      searchInput: String
+    };
+  },
   computed: {
-    counter: function() {
-      return this.$store.state.count;
+    controllerMapped: function() {
+      return this.$store.state.controller; //.filter(obj => {});
     }
   }
 };

@@ -19,7 +19,7 @@
           class="b--none br4 pa2 bg-light-yellow hover-bg-light-blue blue"
         >
           +
-          <span v-show="$store.state.bt_state" class="di">Create a new group</span>
+          <span v-show="$store.state.bt_group_hover_state" class="di">Create a new group</span>
         </button>
       </div>
     </header>
@@ -46,5 +46,10 @@ export default {
 <style lang="scss">
 a.router-link-exact-active {
   background-color: #ffd700;
+}
+
+/* Custom style particles */
+.bg-dark-yellow {
+  background-color: #ebe19a;
 }
 </style>

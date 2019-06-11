@@ -1,6 +1,9 @@
 <template>
   <div id="test">
     <History/>
+
+    <p class="ma1 pa1 tc" @click="$store.commit('increment')">Click on Vuex to count: {{counter}}</p>
+
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <p>Pellentesque in quam non lorem pharetra hendrerit quis quis purus.</p>
     <p>Nullam eu risus massa.</p>
@@ -46,6 +49,11 @@ export default {
   name: "Test",
   components: {
     History
+  },
+  computed: {
+    counter: function() {
+      return this.$store.state.count;
+    }
   }
 };
 </script>

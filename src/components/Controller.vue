@@ -5,8 +5,8 @@
   >
     <input
       class="w-90 bw-0 bg-transparent bt-0 br-0 bl-0 b--light-blue"
-      v-model="$store.state.controller[index].id"
-      placeholder="Digite aqui"
+      placeholder="Type here"
+      v-model.trim="$store.state.controller[index].id"
     >
     <h1 class="b f4 pa1 mb1">{{obj_name}}</h1>
     <p class="mt2">

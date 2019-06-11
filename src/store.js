@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    bt_state: false,
+    bt_group_hover_state: false,
     count: 1,
     controller: [
       {
@@ -39,10 +39,10 @@ export default new Vuex.Store({
       state.controller[index].status = !state.controller[index].status;
     },
     btShow(state) {
-      state.bt_state = true;
+      state.bt_group_hover_state = true;
     },
     btHide(state) {
-      state.bt_state = false;
+      state.bt_group_hover_state = false;
     },
     increment(state) {
       state.count *= 2;
