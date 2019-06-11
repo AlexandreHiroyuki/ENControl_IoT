@@ -29,11 +29,6 @@ export default {
     Controller,
     History
   },
-  data: function() {
-    return {
-      searchInput: String
-    };
-  },
   computed: {
     controllerMapped: function() {
       return this.$store.state.controller; //.filter(obj => {});
