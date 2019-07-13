@@ -6,8 +6,8 @@
     <input
       class="w-90 bw-0 bg-transparent bt-0 br-0 bl-0 b--light-blue"
       placeholder="Type here"
-      v-model.trim="$store.state.controller[index].id"
-    >
+      v-model.trim="$store.state.controllers[index].id"
+    />
     <h1 class="b f4 pa1 mb1">{{obj_name}}</h1>
     <p class="mt2">
       Status:
@@ -28,10 +28,10 @@ export default {
   },
   computed: {
     obj_name: function() {
-      return this.$store.state.controller[this.index].id;
+      return this.$store.state.controllers[this.index].id;
     },
     status: function() {
-      return this.$store.state.controller[this.index].status;
+      return this.$store.state.controllers[this.index].status;
     },
     showStatus: function() {
       if (this.status) return "ON";

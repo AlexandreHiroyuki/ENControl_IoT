@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     bt_group_hover_state: false,
     count: 1,
-    controller: [
+    controllers: [
       {
         id: "Lamp 1",
         status: true
@@ -32,11 +32,22 @@ export default new Vuex.Store({
         id: "Strawberry",
         status: true
       }
-    ]
+    ],
+    searchInput: ""
+  },
+  getters: {
+    filteredControllers: state => {
+      const objects = state.controllers;
+      let filtered_objects = objects;
+      return filtered_objects;
+      // return state.controllers.filter(obj =>
+      //   obj.id.includes(state.searchInput)
+      // );
+    }
   },
   mutations: {
     controllerSwitch(state, index) {
-      state.controller[index].status = !state.controller[index].status;
+      state.controllers[index].status = !state.controllers[index].status;
     },
     btShow(state) {
       state.bt_group_hover_state = true;
