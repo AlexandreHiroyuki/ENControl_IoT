@@ -1,14 +1,7 @@
-import Vue from "vue";
-import Tachyons from "tachyons";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-
-Vue.config.productionTip = false;
+import App from "./App.js"
+import router from "./router.js"
 
 new Vue({
-  Tachyons,
   router,
-  store,
   render: h => h(App)
-}).$mount("#app");
+}).$mount(`#app`)

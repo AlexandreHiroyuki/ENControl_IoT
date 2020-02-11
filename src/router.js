@@ -1,10 +1,7 @@
-import Vue from "vue";
-import Router from "vue-router";
-import ControlTable from "./views/ControlTable.vue";
+import ControlTable from "./views/ControlTable.js"
+import Test from "./views/Test.js"
 
-Vue.use(Router);
-
-export default new Router({
+export default new VueRouter({
   routes: [
     {
       path: "/",
@@ -14,7 +11,7 @@ export default new Router({
     {
       path: "/test",
       name: "test",
-      component: () => import("./views/Test.vue")
+      component: Test
     }
   ]
-});
+})
