@@ -1,4 +1,4 @@
-# Electrical Network Controller - Internet of Things
+# Arduino Electrical Network Controller
 
 ## Minimun System Requiriments
 

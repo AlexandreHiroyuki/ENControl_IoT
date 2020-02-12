@@ -1,1 +1,1 @@
-browser-sync start -f . --server
+browser-sync start -f . --server --config bs-config.js

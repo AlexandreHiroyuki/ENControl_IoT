@@ -1,0 +1,23 @@
+.color-ino {
+  color: #00979d;
+}
+.bg-color-ino {
+  background-color: #00979d;
+}
+.b--color-ino {
+  border-color: #00979d;
+}
+
+.hover-color-ino:hover,
+.hover-color-ino:focus {
+  color: #00979d;
+}
+
+.hover-bg-color-ino:hover,
+.hover-bg-color-ino:focus {
+  background-color: #00979d;
+}
+
+.sticky {
+  position: sticky;
+}
